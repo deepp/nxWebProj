@@ -7,7 +7,7 @@
         <!--About Hailyo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="task1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutUs" id="BYZ-38-t0r" customClass="ViewController" customModule="task1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,16 +20,24 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="540"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cellid" id="v9h-Wd-1iJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cellid1" id="xV1-3Q-SZ0">
                                         <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xV1-3Q-SZ0" id="tZJ-Zu-kYG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" label="">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cellid2" id="v9h-Wd-1iJ">
+                                        <rect key="frame" x="0.0" y="136" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v9h-Wd-1iJ" id="5xr-fO-0WK">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="9P5-gX-tAh" kind="push" identifier="webSegue" id="1Xy-Zd-gib"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -49,7 +57,7 @@
         <!--Web View Controller-->
         <scene sceneID="BeQ-z0-kpI">
             <objects>
-                <viewController id="9P5-gX-tAh" customClass="WebViewController" customModule="task1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webViewId" id="9P5-gX-tAh" customClass="WebViewController" customModule="task1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iwZ-ez-lpx"/>
                         <viewControllerLayoutGuide type="bottom" id="P6O-db-L4K"/>
@@ -59,20 +67,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7o-Yf-PaU">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dCO-N3-QVf"/>
+                    <navigationItem key="navigationItem" id="dCO-N3-QVf">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="8ae-r0-bZO">
+                            <connections>
+                                <action selector="BackBtnAction:" destination="9P5-gX-tAh" id="MHZ-VX-Lgg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="webBack" destination="8ae-r0-bZO" id="0zw-IJ-fpA"/>
                         <outlet property="webView" destination="J7o-Yf-PaU" id="lhH-ig-x95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVW-dt-ovR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1160" y="330"/>
+            <point key="canvasLocation" x="724" y="966"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="odn-o0-a4S">

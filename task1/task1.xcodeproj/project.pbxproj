@@ -15,6 +15,7 @@
 		2C46952D1BCCF24A00A3B41A /* task1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46952C1BCCF24A00A3B41A /* task1Tests.swift */; };
 		2C4695381BCCF24A00A3B41A /* task1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4695371BCCF24A00A3B41A /* task1UITests.swift */; };
 		2C4695461BCCF9D400A3B41A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4695451BCCF9D400A3B41A /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C7C78111BCD54D60097D682 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7C78101BCD54D60097D682 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2C4695371BCCF24A00A3B41A /* task1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task1UITests.swift; sourceTree = "<group>"; };
 		2C4695391BCCF24A00A3B41A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C4695451BCCF9D400A3B41A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		2C7C78101BCD54D60097D682 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7C78111BCD54D60097D682 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 		2C46950B1BCCF24A00A3B41A = {
 			isa = PBXGroup;
 			children = (
+				2C7C78101BCD54D60097D682 /* MessageUI.framework */,
 				2C4695161BCCF24A00A3B41A /* task1 */,
 				2C46952B1BCCF24A00A3B41A /* task1Tests */,
 				2C4695361BCCF24A00A3B41A /* task1UITests */,
@@ -487,6 +491,7 @@
 				2C46953E1BCCF24A00A3B41A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C46953F1BCCF24A00A3B41A /* Build configuration list for PBXNativeTarget "task1Tests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +500,7 @@
 				2C4695411BCCF24A00A3B41A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C4695421BCCF24A00A3B41A /* Build configuration list for PBXNativeTarget "task1UITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +509,7 @@
 				2C4695441BCCF24A00A3B41A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

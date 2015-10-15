@@ -8,38 +8,31 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UINavigationBarDelegate {
 
     
     @IBOutlet weak var webView: UIWebView!
-    
-    
-    
-    var url = String()
+        var url = String()
+    @IBOutlet weak var webBack: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(url)")
+        print("URL : \(url)")
         let requestURL = NSURL(string:url)
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
-
+    }
+ 
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+        return UIBarPosition.TopAttached
+    }
+    
+    @IBAction func BackBtnAction(sender: UIBarButtonItem) {
+      self.dismissViewControllerAnimated(true, completion: nil);
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
